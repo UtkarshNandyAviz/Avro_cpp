@@ -42,7 +42,6 @@ BUILD_CPP=$BUILD/$AVRO_CPP
 DIST_DIR=../../dist/$AVRO_CPP
 DOC_CPP=$BUILD/$AVRO_DOC/api/cpp
 DIST_DIR=../../dist/cpp
-AVRO_INSTALL_DIR=./avro
 TARFILE=../dist/cpp/$AVRO_CPP.tar.gz
 
 function do_doc() {
