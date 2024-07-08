@@ -20,9 +20,8 @@ cmake_minimum_required (VERSION 3.1)
 
 set (CMAKE_LEGACY_CYGWIN_WIN32 0)
 
-if (NOT DEFINED CMAKE_CXX_STANDARD)
-    set(CMAKE_CXX_STANDARD 17)
-endif()
+set (CMAKE_CXX_STANDARD 17)
+
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -64,7 +63,7 @@ if (WIN32 AND NOT CYGWIN AND NOT MSYS)
 endif()
 
 if (CMAKE_COMPILER_IS_GNUCXX)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pedantic -Werror -Wno-error=cpp")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pedantic -Wno-error=cpp")
 if (AVRO_ADD_PROTECTOR_FLAGS)
     set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -fstack-protector-all -D_GLIBCXX_DEBUG")
     # Unset _GLIBCXX_DEBUG for avrogencpp.cc because using Boost Program Options
