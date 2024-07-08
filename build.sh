@@ -71,7 +71,8 @@ function do_dist() {
   fi
 }
 
-(mkdir -p build; cd build; cmake --version; cmake -G "Unix Makefiles" ..)
+(mkdir -p build; cd build; cmake --version; cmake -G "Unix Makefiles" -DCMAKE_CXX_STANDARD=14 ..)
+echo "PROBLEM HERE!"
 for target in "$@"
 do
 
