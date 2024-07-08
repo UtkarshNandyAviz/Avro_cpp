@@ -83,7 +83,7 @@ case "$target" in
     ;;
 
   test)
-    (cd build && cmake -G "Unix Makefiles" -D CMAKE_BUILD_TYPE=Debug -D AVRO_ADD_PROTECTOR_FLAGS=1 .. && make && cd .. \
+    (cd build && cmake -G "Unix Makefiles" -D CMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_STANDARD=14 -D AVRO_ADD_PROTECTOR_FLAGS=1 .. && make && cd .. \
       && ./build/buffertest \
       && ./build/unittest \
       && ./build/CodecTests \
