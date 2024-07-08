@@ -70,8 +70,6 @@ function do_dist() {
     exit 1
   fi
 }
-echo "HELLO WORLD!"
-echo "PROBLEM HERE!"
 (mkdir -p build; cd build; cmake --version; cmake -G "Unix Makefiles" -D CMAKE_CXX_STANDARD=14 ..)
 echo "PROBLEM HERE!"
 for target in "$@"
